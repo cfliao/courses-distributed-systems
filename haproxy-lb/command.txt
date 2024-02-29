@@ -1,0 +1,4 @@
+node producer-http-basics.js
+set PORT=3001 && node consumer-http-healthendpoint.js
+set PORT=3002 && node consumer-http-healthendpoint.js
+haproxy -f load-balance.cfg
