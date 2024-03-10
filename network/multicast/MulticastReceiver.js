@@ -12,6 +12,6 @@ server.bind(2390, () => {
 
 server.on('message', function (message, remote) {
     console.log(`From: ${remote.address}:${remote.port} - ${message}`);
-    server.send(`R_${message}`, remote.port, remote.address); //reply by unicasting
-    console.log(`R_${message} sent.`);
+    server.send(`ResponseFor_${message}`, remote.port, remote.address); //reply by unicasting
+    console.log(`ResponseFor_${message} sent.`);
 });

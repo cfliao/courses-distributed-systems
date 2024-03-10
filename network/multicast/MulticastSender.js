@@ -9,7 +9,7 @@ server.bind(2391, () => {
     //server.setMulticastLoopback(true);
     //server.addMembership('239.255.255.250');
     setInterval(() => {
-        server.send('Test', 2390, "239.255.255.250");
+        server.send('<client message>', 2390, "239.255.255.250");
     }, 5000);
 });
 //
