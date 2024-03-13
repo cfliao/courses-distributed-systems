@@ -3,5 +3,6 @@
   "version": "1.0.0",
   "dependencies": {
     "express": "^4.16.4"
-  }
+  },
+  "type": "commonjs"
 }
