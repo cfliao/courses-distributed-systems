@@ -8,8 +8,8 @@ fastify.get('/add', (request, reply) => {
     let x = parseInt(request.query.x);
     let y = parseInt(request.query.y);
 
-    reply.send({result: x + y});
+    reply.send({ result: x + y });
 });
 
 // Run the server!
-fastify.listen(3000);
+fastify.listen({ port: 3000 });
