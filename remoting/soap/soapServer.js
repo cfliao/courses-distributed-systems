@@ -5,7 +5,7 @@ const service = {
     CalculatorImplService: {
         CalculatorImplPort: {
             add: function (inputMessage) {
-                return {result: inputMessage.x + inputMessage.y};
+                return {return: inputMessage.x + inputMessage.y};
             }
         }
     }
