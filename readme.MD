@@ -7,3 +7,4 @@
     * http: Examples for HTTP client and servers
     * rest: Examples for building RESTful APIs using different frameworks
     * remoting: Examples for gRPC and SOAP; To observe the packets of HTTP2, refer to: https://cloud.tencent.com/developer/article/1801855
+    * mom: Examples for MQTT, including .pcapng files which represent the traces captured by Wireshark. These files illustrate the behavior of packets with Quality of Service (QoS) levels 0, 1, and 2.
