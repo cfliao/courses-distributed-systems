@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <title>Vue</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+</head>
+
+<body>
+<h1>Vue</h1>
+<p>Welcome to Vue</p>
+
+<div id="verifyForm">
+    <p v-if="login">
+        {{message}}<br/>
+        name:<input type="text" v-model="username"/><br/>
+        password:<input type="password" v-model="password"/><br/>
+        <button v-on:click="verify">Login</button>
+    </p>
+    <div v-if="main">
+        <H1>Main</H1>
+    </div>
+</div>
+<script>
+    let app = new Vue({
+        el: '#verifyForm',
+        data: {
+            username: '',
+            password: '',
+            message: 'Please login.',
+            login: true,
+            main: false
+        },
+        computed: {},
+        methods: {
+            verify: function () {
+                let that = this;
+                $.ajax({
+                    url: `http://localhost:3000/verify?username=${this.username}&password=${this.password}`,
+                    type: 'GET',
+                    success: function (result) {
+                        that.login = !result.result;
+                        if (result.result) that.main = true;
+                        else that.message = 'login failed.';
+                    }
+                });
+            }
+        }
+    });
+</script>
+</body>
+
+</html>
