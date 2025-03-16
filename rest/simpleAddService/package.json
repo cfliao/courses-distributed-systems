@@ -2,6 +2,7 @@
   "name": "demo",
   "version": "1.0.0",
   "dependencies": {
-    "fastify": "*"
+    "fastify": "^5.2.1",
+    "@fastify/formbody": "^8.0.2"
   }
 }

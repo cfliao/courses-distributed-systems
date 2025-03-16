@@ -1,12 +1,15 @@
 // Require the framework and instantiate it
 const fastify = require('fastify')();
+const formbody = require('@fastify/formbody');
 
+// Register the formbody plugin
+fastify.register(formbody);
 // Declare a route
-fastify.get('/add', (request, reply) => {
-    console.log(request.query.x);
-    console.log(request.query.y);
-    let x = parseInt(request.query.x);
-    let y = parseInt(request.query.y);
+fastify.post('/calculator/add', (request, reply) => {
+    console.log(request.body.x);
+    console.log(request.body.y);
+    let x = parseInt(request.body.x);
+    let y = parseInt(request.body.y);
 
     reply.send({ result: x + y });
 });
