@@ -18,7 +18,7 @@ function main() {
         grpc.credentials.createInsecure());
 
     console.log('Sending...');
-    client.sayHello({name: 'Tom1'}, function (err, response) {
+    client.sayHello({name: 'Tom2'}, function (err, response) {
         console.log('Response:', response.message);
     });
 
