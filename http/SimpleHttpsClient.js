@@ -11,9 +11,10 @@ const options = {
 https.get(options, (resp)=>{
     resp.setEncoding('utf-8');
     console.log(resp.headers);
-    resp.on('data', function (data) {
-        console.log(data);
-    });
+    // resp.on('data', function (data) {
+    //     console.log(data);
+    // });
+      
 });
 
 
