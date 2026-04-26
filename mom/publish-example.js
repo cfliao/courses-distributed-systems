@@ -1,4 +1,4 @@
-const mqtt = require('mqtt');
+import mqtt from 'mqtt';
 const client = mqtt.connect();
 
 const topic = 'EVENT';
