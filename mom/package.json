@@ -2,6 +2,8 @@
   "name": "mqttlab",
   "version": "1.0.0",
   "dependencies": {
+    "hex-to-array-buffer": "*",
     "mqtt": "*"
-  }
+  },
+  "type":"module"
 }
